@@ -10,5 +10,6 @@ Usual pruning methods realize top-to-bottom approach. Firstly the full NN is tra
 Here I try to apply upside down approach. I begin from training very sparse model and then increase the density of the model graduly, repeating the thaining. The hypothesis is that such procedure should lead to a better performance of the model on the OOD data and faster convergence in terms of FLOPS needed for training.
 
 First part of the project is devoted to the analysis of the synthetic data produced by 3-layer perceptron.
+Description of the results and more user-friendly main section coming soon.
 At the future part I am going to test hypothesis on the image classification tasks using large CNN models.
 At the next step I am going to apply the approach to the transformer-like archetectures.
