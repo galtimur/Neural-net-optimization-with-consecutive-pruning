@@ -2,7 +2,7 @@
 """
 @author: Timur Galimzyanov
 
-functions for plotting results and e.t.c.
+functions for plotting results et cetera
 
 """
 
