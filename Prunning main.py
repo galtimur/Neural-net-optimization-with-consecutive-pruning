@@ -17,6 +17,18 @@ import torch.optim.lr_scheduler as sched
 
 import gc
 
+'''
+Loading pruning functions
+Loading MLP models and train data generation functions
+'''
+from prun_functions import prune_model, reprune_model_local, unprune_model, count_non_zero
+from mlp_setup import Teacher, Student, gen_train
+
+'''
+importing functions for plotting results e.t.c.
+'''
+from plotting_results import plot_train, loss_landscape1D, loss_landscape2D, plot_landscape1D, plot_landscape2D
+
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -37,15 +49,6 @@ def seed_everyting(seed):
     torch.backends.cudnn.deterministic = True
 
 #%%
-
-'''
-Loading pruning functions
-Loading MLP models and train data generation functions
-'''
-
-from prun_functions import prune_model, reprune_model_local, unprune_model, count_non_zero
-from mlp_setup import Teacher, Student, gen_train
-
 
 '''
 Testing pruning functions
@@ -145,11 +148,6 @@ train_norm = train_orig_norm
 ODD_norm = (abs(target_ODD)).mean().item()
 
 #%%
-
-'''
-importing functions for plotting results and e.t.c.
-'''
-from plotting_results import plot_train, loss_landscape1D, loss_landscape2D, plot_landscape1D, plot_landscape2D
 
 '''
 functions for model training
