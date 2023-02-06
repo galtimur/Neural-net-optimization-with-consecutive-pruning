@@ -16,7 +16,7 @@ At the next step I am going to apply the approach to the transformer-like archet
 
 ### Files:
 
-- Prunning main.py - Main program
+- Pruning_main.py - Main program
 - mlp_setup.py - Сlasses for models of multilayer perceptron and functions for train data generation
 - plotting_results.py - Аunctions for plotting results etc.
 - prun_functions.py - Functions for pruning and repruning the models
