@@ -79,7 +79,7 @@ class Student(nn.Module):
         return x
 
 
-def gen_train(num_sample = 1000, seed=42, new = False):
+def gen_train(hidden_size = 200, num_sample = 1000, seed=42, new = False):
 
     '''
     initializatin of the model
@@ -105,7 +105,7 @@ def gen_train(num_sample = 1000, seed=42, new = False):
         seed_everyting(seed)
         n_in = 30
         n_out = 5
-        hidden = 100
+        hidden = hidden_size
     
         teacher = Teacher(n_in = n_in, n_out = n_out, hidden = hidden)
         torch.save(teacher, 'teacher.pt')
