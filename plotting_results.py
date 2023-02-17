@@ -30,9 +30,9 @@ def plot_train(res, lim = 0.5, text=''):
     
     print('Train, ODD = ', sum(losses[-50:])/50, sum(losses_ODD[-50:])/50)
     plt.title(text)
-    plt.plot(losses[:])    
-    plt.plot(losses_ODD[:])
-    plt.plot(losses_val[:])
+    plt.plot(losses[:], label="Train")    
+    plt.plot(losses_ODD[:], label="OOD")
+    plt.plot(losses_val[:], label="Val")
     plt.ylim([0, lim])
     plt.show()
 
