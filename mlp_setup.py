@@ -19,7 +19,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 #%%
 
-def seed_everyting(seed):
+def seed_everything(seed):
 
     '''
     Seed everything
@@ -102,7 +102,7 @@ def gen_train(hidden_size = 200, num_sample = 1000, seed=42, new = False):
 
     if new:
         
-        seed_everyting(seed)
+        seed_everything(seed)
         n_in = 30
         n_out = 5
         hidden = hidden_size
