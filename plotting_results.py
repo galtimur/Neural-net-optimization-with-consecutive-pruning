@@ -33,6 +33,7 @@ def plot_train(res, lim = 0.5, text=''):
     plt.plot(losses[:], label="Train")    
     plt.plot(losses_ODD[:], label="OOD")
     plt.plot(losses_val[:], label="Val")
+    plt.legend(loc="upper right")
     plt.ylim([0, lim])
     plt.show()
 
